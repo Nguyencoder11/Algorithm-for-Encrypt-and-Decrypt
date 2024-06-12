@@ -81,11 +81,11 @@ string giaima(string banma, int a, int b){
     int inv_a = expEuclid(mod, a);
     for(int i=0; i<banma.length(); i++){
         if(islower(banma[i])){
-            cipherMessage += (char) (((inv_a * (banma[i] - 'a' - b + 26)) % 26) + 'a');
+            cipherMessage += (char) (((inv_a * (banma[i] - 'a' - b + mod)) % 26) + 'a');
         }else if(banma[i] == ' '){
             cipherMessage += ' ';
         }else{
-            cipherMessage += (char) (((inv_a * (banma[i] - 'A' - b + 26)) % 26) + 'A');
+            cipherMessage += (char) (((inv_a * (banma[i] - 'A' - b + mod)) % 26) + 'A');
         }
     }
 
