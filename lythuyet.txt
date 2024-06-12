@@ -1,0 +1,29 @@
+- He ma Affine:
+Input: 
+    Ban ro: P = x1x2...xn
+    Khoa k = (a, b)
+Output: 
+    Ban ma: C = y1y2...yn
+Qua trinh ma hoa:
+    Ek(x) = (a.x + b) mod n 
+Qua trinh giai ma:
+    Dk(y) = (a^-1.(y - b)) mod n
+Dieu kien ton tai a^-1: 
+    gcd(a, n) = 1
+
+- He ma Hill:
+Input: 
+    Ban ro: P = x1x2...xn
+    Ma tran khoa k
+Output: 
+    Ban ma: C = y1y2...yn
+Qua trinh ma hoa:
+    Ek(x) = x.k 
+Qua trinh giai ma:
+    Dk(y) = x.k^-1
+Dieu kien ton tai k^-1: 
+    <=> ton tai det(k)^-1
+    gcd(detk, n) = 1 <=> detk != 0, a thuoc Zn
+Cong thuc tinh k^-1:
+    k^-1 = det(k)^-1 * k(phu hop)
+
